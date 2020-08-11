@@ -1,0 +1,333 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+  box-sizing: border-box;}
+/* Eric A. and Kathryn S. Meyer. 2019. CSS Tools: Reset CSS. Version 2.0.
+[html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}].
+Available at: https://meyerweb.com/eric/tools/css/reset/ [Accessed: 26 October 2019].*/
+
+img {
+  width: 100%;
+  height: 100%;}
+
+h1{
+  font-size: 2.3rem;
+  font-family: 'Quattrocento', serif;
+  color: #791B99;}
+
+h2{
+  font-size: 2rem;
+  font-family: 'Quattrocento', serif;
+  color: #791B99;}
+
+p, a {
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: #791B99;
+  font-size: 1.6rem;}
+
+p{
+  margin-top: 1.5rem;}
+
+a {
+  text-decoration: none;}
+
+
+/* ----------------------- Desktop Nav*/
+
+header {
+  border-bottom: 0.1rem solid #9A55B2;
+  position: fixed;
+  background-color: white;
+  z-index: 99;
+  width: 100%;
+  padding: 0.5rem 1.5rem;}
+
+.headerContainer {
+  height: 7rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 77rem;
+  margin: 0 auto;}
+
+.home {
+  margin-right: 5rem;}
+
+nav {
+  display: grid;
+  grid-template-columns: 4.4rem 4rem 4.3rem 6.5rem; /*Could not use auto auto auto auto because a:hover {font-weight:bold} caused the navigation menu to shift left*/
+  grid-column-gap: 4rem;
+}
+
+a:hover{
+  font-weight: bold;}
+
+/*the idea of 'label {display:none}' in desktop view was taken from the youtube video below*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019]*/
+label {
+  font-size: 3.5rem;
+  position: absolute;
+  right: 1rem;
+  top:0.7rem;
+  display: none;
+  color: #791B99;}
+
+/*The idea of being able to target navigation menu by using checkbox id checked from the youtube video below*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019]*/
+#burger:checked ~ nav {
+display: block;}
+
+/*The idea of having input {display:none} in the desktop view*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019]*/
+input{
+  display: none;}
+
+/* ----------------------------------- Desktop Main */
+
+.container {
+  display: grid;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;}
+
+.homeContainer{
+  grid-template-rows: 9rem repeat(4, auto);
+}
+
+/*The idea of using relative positioning for the parent container so that the absolute positioned child element is positioned in relation to the parent*/
+/*Chris Coyier. 2010. Absolute Positioning Inside Relative Positioning Available at: https://css-tricks.com/absolute-positioning-inside-relative-positioning/ [Accessed: 26 October 2019]*/
+.inspirationContainer {
+  position: relative;
+  margin-bottom: 3rem;}
+
+.inspirationText {
+  position:absolute;
+  left: 5%;
+  top: 20%;
+  margin: auto 5% auto auto;
+  background-color: lightgrey;
+  max-width: 40rem;
+  opacity: 0.9;
+  border-radius: 1rem;
+  border: solid #9A55B2 0.15rem;
+  padding: 1.25rem;}
+
+.sAndRContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  grid-column-gap: 4vw;
+  grid-row-gap: 2vw;
+  margin-bottom: 5rem;}
+
+.researchText h2 {
+  padding-right: 3rem;} /*Used padding right so that the research and study titles go to two lines roughly the same time*/
+
+.studentQuoteContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 5rem;
+  align-items: center;}
+
+.studentQuote {
+  text-align: right;
+  padding-right: 2.5rem;
+  align-content: center;}
+
+.newsContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  grid-row-gap: 2vw;
+  grid-column-gap: 4vw;
+  margin-bottom: 6rem;}
+
+  /* --------- Desktop Footer */
+
+footer{
+  background-color: #E6E1F9;}
+
+.containerFooter{
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 4rem);
+  grid-auto-flow: column;
+  padding: 0 1rem 1rem 1rem;
+  align-items: flex-end;}
+
+.containerFooter a:nth-of-type(4){
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: right;}
+
+.containerFooter a:hover {
+  font-weight: normal;
+  text-decoration: underline;}
+
+/* --------------------------- Mobile layout */
+
+@media(max-width: 950px) {
+
+  h1{
+    font-size: 2rem;}
+
+  h2{
+    font-size: 1.8rem;}
+
+  /* -------------------------------Mobile Navigation */
+
+  .headerContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: 5rem;
+    height: auto;}
+
+  .home {
+    width: 13rem;
+    margin-right: 20rem;}
+
+/*The idea of displaying the mobile navigation menu as none*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019]*/
+
+  nav {
+    display: none;
+    margin-right: 0;
+    padding-top: 1rem;}
+
+
+/*The idea of displaying the unordered list as block in mobile view*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019]*/
+
+  a {
+    display: block;}
+
+  nav a {
+      line-height: calc((100vh - 6.75rem)/4);
+      text-align: center;
+      margin-right: -2rem;
+      margin-left: -2rem;
+      border-top: solid #9A55B2 0.1rem;}
+
+  nav a:hover{
+      background-color: #9A55B2;
+      color:white;}
+
+
+/*The idea of displaying label as block in mobile view*/
+/*Caler Edwards. 2017. Responsive Menu With Media Queries (Checkbox Trick) - Using Only CSS3 Available at: [Accessed: 26 October 2019]*/
+
+  label{
+    display: block;}
+
+  label:hover{
+    cursor: pointer;}
+
+  /* ---------------------- Mobile Main */
+
+  .inspirationContainer .inspirationText {
+    all:unset;}
+
+  .container{
+    grid-template-rows: 6rem repeat(5, auto);
+    grid-row-gap: 1rem;
+    padding: 0 1rem;}
+
+  .inspirationContainer{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:"uniImage"
+                        "inspirationText";
+    grid-row-gap: 1rem;
+  }
+
+  .uniImage{
+    grid-area: uniImage;}
+
+  .inspirationText{
+    display: grid;
+    grid-area: inspirationText;
+    margin-bottom: 1rem;}
+
+  .sAndRContainer{
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto;
+    margin-bottom: 0rem;}
+
+  .researchText{
+    margin: 0.5rem 0;}
+
+  .studyText{
+    margin: 0.5rem 0;}
+
+  .studentQuoteContainer{
+    grid-template-columns: auto;
+    margin-bottom: 0;}
+
+  .studentImage{
+    display: none;}
+
+  .studentQuote{
+    text-align: left;
+    margin: 2rem 0}
+
+  .newsContainer{
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    grid-row-gap: 0;
+    margin-bottom: 0;
+    }
+
+  .mobileBorder{
+    border: 0.1rem solid #791B99;
+    border-top: none;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;}
+
+    /* ------ Mobile Footer */
+
+  .containerFooter {
+    grid-template-columns: auto 10rem;}
+
+  .containerFooter a:last-of-type{
+    min-width: 10rem;}
+}
+
+/*Everything relating to CSS grid in all three web pages has been learned from (but not copied from) the website below*/
+/*CSS-Tricks staff. 2019. A Complete Guide to Grid Available at: https://css-tricks.com/snippets/css/complete-guide-grid/ [Accessed: 26 October 2019]*/

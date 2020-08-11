@@ -1,0 +1,76 @@
+.studyContainer{
+  grid-template-rows: 9rem auto auto auto auto;
+  grid-row-gap: 1rem;
+}
+
+
+.projectContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4rem auto;
+  grid-template-areas:"courseImage courseTitle"
+                      "courseImage courseProject";
+  grid-column-gap: 6vw;
+  margin-bottom: 5vw;
+}
+
+.switch{
+  grid-template-areas:"courseTitle courseImage"
+                      "courseProject courseImage";
+}
+
+.courseTitle{
+  display: grid;
+  grid-area: courseTitle;
+  align-items: center;
+}
+
+.courseImage{
+  grid-area: courseImage;
+  box-sizing: border-box;
+}
+
+.courseProject{
+  grid-area: courseProject;
+}
+
+.courseProject h1{
+  margin-top: 2vw;
+}
+
+.alignRight{
+text-align: right;
+}
+
+
+@media(max-width: 950px) {
+  .studyContainer{
+    grid-template-rows: 6rem auto auto auto auto;
+    grid-row-gap: 1rem;
+  }
+
+  .title{
+    padding-top: 1rem;
+  }
+
+  .projectContainerMobile{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 1rem;
+    grid-template-areas:"courseTitle"
+                        "courseImage"
+                        "courseProject";
+  }
+  .courseTitle h1 {
+    text-align: right;
+  }
+
+  .courseProject p {
+    text-align: left;
+  }
+
+  .alignRightMobile{
+    text-align: right;
+  }
+
+  }
