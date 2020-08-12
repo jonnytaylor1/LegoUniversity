@@ -1,6 +1,8 @@
-## Lego University Static Website
+# Lego University Static Website (Nov 2019)
 
-This website was developed with HTML and CSS (completed November 2019). The website was developed as part of a univerity module and every requirement in the brief was satisfied. The site is fully responsive as shown in the GIFs below.
+## About
+
+The website was developed as part of a univerity module and every requirement in the brief was satisfied. The site is fully responsive and is shown in the GIFs below.
 
 ## Gif Demo
 
